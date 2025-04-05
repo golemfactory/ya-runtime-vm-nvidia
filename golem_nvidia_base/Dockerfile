@@ -13,7 +13,8 @@ RUN apt-get update && apt-get install -y \
 
 RUN cd /usr/src \
 	&& cd /usr/src \
-	&& wget https://download.nvidia.com/XFree86/Linux-x86_64/535.183.01/NVIDIA-Linux-x86_64-535.183.01-no-compat32.run \
-	&& chmod +x NVIDIA-Linux-x86_64-535.183.01-no-compat32.run \
-	&& ./NVIDIA-Linux-x86_64-535.183.01-no-compat32.run -s --no-kernel-modules \
+	&& wget https://download.nvidia.com/XFree86/Linux-x86_64/570.86.16/NVIDIA-Linux-x86_64-570.86.16.run \
+	&& chmod +x NVIDIA-Linux-x86_64-570.86.16.run \
+	&& ./NVIDIA-Linux-x86_64-570.86.16.run -s --no-kernel-modules \
 	&& rm -rf /usr/src/*
+	

@@ -8,7 +8,7 @@ on:
 
 env:
   runtime-vm_repository: golemfactory/ya-runtime-vm
-  runtime-vm_version: v0.4.1
+  runtime-vm_version: v0.4.3
   vm_name: ya-runtime-vm-nvidia
   os_name: linux
   organisation: golemfactory
@@ -97,7 +97,7 @@ jobs:
           mv self-test-gpu.gvmi ${{ env.self-test-img_gvmi }}
           ./debian/build-deb.sh ${{ github.ref }} ${{ env.self-test-img_gvmi }} ya-runtime-vm-${{ env.os_name }}-${{ env.runtime-vm_version }}/ya-runtime-vm
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: deb
           path: |
@@ -112,7 +112,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
         with:
           name: deb
           path: dist/
