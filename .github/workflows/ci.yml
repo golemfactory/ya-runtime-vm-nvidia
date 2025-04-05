@@ -8,7 +8,7 @@ on:
 
 env:
   runtime-vm_repository: golemfactory/ya-runtime-vm
-  runtime-vm_version: v0.4.3
+  runtime-vm_version: v0.4.4
   vm_name: ya-runtime-vm-nvidia
   os_name: linux
   organisation: golemfactory
